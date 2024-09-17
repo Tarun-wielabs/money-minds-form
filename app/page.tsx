@@ -11,6 +11,14 @@ export default function Home() {
     "Exclusive Network",
   ];
 
+  const animation = [
+    "animation-wiggle-1s",
+    "animation-wiggle-reverse-2s",
+
+    "animation-wiggle-reverse-1s",
+    "animation-wiggle-2s",
+  ];
+
   return (
     <>
       <header className="flex justify-center items-center w-full md:px-10 px-5 lg:py-28 md:py-20 py-14 relative">
@@ -40,7 +48,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className={`from-[#DBDBFF99] to-[#2A3439] bg-gradient-to-b p-[2px] rounded-[38px] `}
+                  className={`from-[#DBDBFF99] to-[#2A3439] bg-gradient-to-b p-[2px] rounded-[38px] ${animation[index]}`}
                 >
                   <div className="bg-black w-full h-full rounded-[38px]">
                     <div

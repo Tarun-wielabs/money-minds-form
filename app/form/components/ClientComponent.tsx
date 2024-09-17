@@ -1,6 +1,6 @@
 "use client";
 
-import { synonym } from "@/util/fonts";
+import { chillaxRegular, synonym } from "@/util/fonts";
 import { FormEvent, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -136,6 +136,7 @@ export default function ClientComponent() {
               name: "phonenumber",
               id: "phonenumber",
             }}
+            country={"us"}
             onChange={(phone) => setPhoneNumber(phone)}
             inputStyle={{
               borderWidth: 1,
@@ -143,15 +144,19 @@ export default function ClientComponent() {
               backgroundColor: "#0E1113",
               paddingTop: 27,
               paddingBottom: 27,
-              paddingLeft: 65,
+              paddingLeft: 85,
               paddingRight: 20,
               color: "#ffffff",
               borderRadius: 16,
               width: "100%",
               fontSize: 16,
+              ...chillaxRegular.style,
             }}
             buttonStyle={{
-              borderWidth: 1,
+              borderTopWidth: 1,
+              borderLeftWidth: 1,
+              borderBottomWidth: 1,
+              borderRightWidth: 0,
               borderColor: "#1C2326",
               backgroundColor: "#0E1113",
               paddingTop: 5,
@@ -159,7 +164,10 @@ export default function ClientComponent() {
               paddingLeft: 10,
               paddingRight: 10,
               borderRadius: 16,
+              borderBottomRightRadius: 0,
+              borderTopRightRadius: 0,
               fontSize: 14,
+              ...chillaxRegular.style,
             }}
             dropdownStyle={{
               borderWidth: 1,
@@ -173,6 +181,7 @@ export default function ClientComponent() {
               fontSize: 14,
               color: "#ffffff",
               maxWidth: 250,
+              ...chillaxRegular.style,
             }}
             dropdownClass="no-scrollbar"
           />
