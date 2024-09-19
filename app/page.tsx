@@ -34,7 +34,7 @@ export default function Home() {
         </Link>
       </header>
 
-      <main className="flex flex-col lg:w-[80%] md:w-[90%] w-full justify-center items-center lg:gap-24 md:gap-16 gap-12 px-5">
+      <main className="flex flex-col lg:w-[80%] md:w-[90%] w-full justify-center items-center lg:gap-24 md:gap-16 gap-12 p-5">
         <div className="flex flex-col justify-center items-center gap-5">
           <span
             className={` text-center w-fit bg-gradient-to-r lg:text-[69px] md:text-[50px] text-[35px] from-white to-[#71717A] inline-block text-transparent bg-clip-text`}
