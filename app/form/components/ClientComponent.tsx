@@ -5,15 +5,11 @@ import { FormEvent, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
-import tick from "@/public/checkbox-tick.svg";
-import untick from "@/public/checkbox-untick.svg";
-import Image from "next/image";
-
 export default function ClientComponent() {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [click, setClick] = useState(true);
+  const [click, setClick] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -193,6 +189,26 @@ export default function ClientComponent() {
             dropdownClass="no-scrollbar"
           />
         </div>
+
+        <div
+          className={`text-[#D1D1D1] flex pl-3 ${synonym.className} md:text-[16px] text-[14px] `}
+        >
+          <input
+            type="checkbox"
+            checked={click}
+            id="checkbox"
+            onChange={() => setClick((prevState) => !prevState)}
+            className={
+              "appearance-none w-[25px] h-[18px] bg-[url('/checkbox-untick.svg')] cursor-pointer bg-cover checked:bg-[url('/checkbox-tick.svg')] checked:bg-cover "
+            }
+            required
+          />
+          <span className="ml-2">
+            I agree to receive marketing communications from Money Minds via
+            email and phone, using the contact information I&apos;ve provided.
+          </span>
+        </div>
+
         <button
           type="submit"
           className="from-[#DBDBFF99] mt-5 to-[#2A3439] bg-gradient-to-b w-full rounded-[16px] p-[1px] "
@@ -206,24 +222,6 @@ export default function ClientComponent() {
           </div>
         </button>
       </form>
-      <span
-        className={`text-[#D1D1D1] flex pl-3 lg:w-2/3 sm:w-10/12 w-full ${synonym.className} md:text-[16px] text-[14px]`}
-      >
-        <span
-          onClick={() => setClick((state) => !state)}
-          className="w-8 h-auto flex-shrink-0 pt-1 cursor-pointer"
-        >
-          {click ? (
-            <Image src={tick} alt="tick" />
-          ) : (
-            <Image src={untick} alt="untick" />
-          )}
-        </span>
-        <span>
-          I agree to receive marketing communications from Money Minds via email
-          and phone, using the contact information I&apos;ve provided.
-        </span>
-      </span>
     </>
   );
 }
