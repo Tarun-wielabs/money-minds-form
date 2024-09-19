@@ -12,14 +12,6 @@ export default function Home() {
 
   const listOfPills2 = ["Immersive Experience", "Online Income System"];
 
-  const animation = [
-    "animation-wiggle-1s",
-    "animation-wiggle-reverse-2s",
-
-    "animation-wiggle-reverse-1s",
-    "animation-wiggle-2s",
-  ];
-
   return (
     <>
       <header className="flex md:justify-center justify-between items-center w-full md:px-10 px-5 lg:py-28 md:py-20 py-10 relative">
@@ -62,7 +54,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className={`from-[#DBDBFF99] to-[#2A3439] bg-gradient-to-b md:p-[2px] p-[1px] rounded-[38px] ${animation[index]}`}
+                  className={`from-[#DBDBFF99] to-[#2A3439] bg-gradient-to-b md:p-[2px] p-[1px] rounded-[38px]`}
                 >
                   <div className="bg-black w-full h-full rounded-[38px]">
                     <div
@@ -80,7 +72,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className={`from-[#DBDBFF99] to-[#2A3439] bg-gradient-to-b md:p-[2px] p-[1px] rounded-[38px] ${animation[index]}`}
+                  className={`from-[#DBDBFF99] to-[#2A3439] bg-gradient-to-b md:p-[2px] p-[1px] rounded-[38px] `}
                 >
                   <div className="bg-black w-full h-full rounded-[38px]">
                     <div

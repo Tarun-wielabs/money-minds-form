@@ -58,15 +58,6 @@
     );
 }
 
-@keyframes wiggle {
-  from {
-    rotate: -1deg;
-  }
-  to {
-    rotate: 1deg;
-  }
-}
-
 @keyframes loadIn {
   from {
     opacity: 0;
@@ -81,20 +72,4 @@
 
 .animation-loadIn {
   animation: loadIn 0.5s linear forwards;
-}
-
-.animation-wiggle-1s {
-  animation: wiggle 0.7s ease-in-out infinite alternate;
-}
-
-.animation-wiggle-2s {
-  animation: wiggle 1s ease-in-out infinite alternate;
-}
-
-.animation-wiggle-reverse-1s {
-  animation: wiggle 0.5s ease-in-out infinite alternate-reverse;
-}
-
-.animation-wiggle-reverse-2s {
-  animation: wiggle 1.2s ease-in-out infinite alternate-reverse;
 }

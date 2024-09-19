@@ -195,7 +195,7 @@ export default function ClientComponent() {
         </div>
         <button
           type="submit"
-          className="from-[#DBDBFF99] to-[#2A3439] bg-gradient-to-b w-full rounded-[16px] p-[1px] mt-1"
+          className="from-[#DBDBFF99] mt-5 to-[#2A3439] bg-gradient-to-b w-full rounded-[16px] p-[1px] "
         >
           <div className="bg-[#191970] w-full h-full rounded-[16px]">
             <div
@@ -207,7 +207,7 @@ export default function ClientComponent() {
         </button>
       </form>
       <span
-        className={`text-[#D1D1D1] flex md:pl-5 pl-3 ${synonym.className} md:text-[16px] text-[14px]`}
+        className={`text-[#D1D1D1] flex pl-3 lg:w-2/3 sm:w-10/12 w-full ${synonym.className} md:text-[16px] text-[14px]`}
       >
         <span
           onClick={() => setClick((state) => !state)}
