@@ -71,7 +71,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Image src={phoneImage} alt="app display" priority />
+        <Image
+          src={phoneImage}
+          alt="app display"
+          priority
+          className="animation-loadIn"
+        />
         <div className="flex flex-col items-center justify-center md:gap-10 gap-5 pb-16  bg-[url('/Gradient2.png')] bg-contain bg-bottom bg-no-repeat">
           <div className="xl:w-[80%] lg:w-[90%] w-full md:text-[24px] text-[16px] md:px-5 md:py-10 py-5 text-[#B6B6B6] md:gap-10 gap-5 flex flex-col text-center items-center justify-center leading-[33px]">
             <span className="md:text-[36px] text-[24px] md:leading-[50px] text-white">

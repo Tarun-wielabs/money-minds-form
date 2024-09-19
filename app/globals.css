@@ -67,18 +67,34 @@
   }
 }
 
+@keyframes loadIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animation-loadIn {
+  animation: loadIn 0.5s linear forwards;
+}
+
 .animation-wiggle-1s {
-  animation: wiggle 1.5s ease-in-out infinite alternate;
+  animation: wiggle 0.7s ease-in-out infinite alternate;
 }
 
 .animation-wiggle-2s {
-  animation: wiggle 2s ease-in-out infinite alternate;
+  animation: wiggle 1s ease-in-out infinite alternate;
 }
 
 .animation-wiggle-reverse-1s {
-  animation: wiggle 1.5s ease-in-out infinite alternate-reverse;
+  animation: wiggle 0.5s ease-in-out infinite alternate-reverse;
 }
 
 .animation-wiggle-reverse-2s {
-  animation: wiggle 2s ease-in-out infinite alternate-reverse;
+  animation: wiggle 1.2s ease-in-out infinite alternate-reverse;
 }
