@@ -18,13 +18,20 @@ export default function ClientComponent() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/waitlist/create`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, email, phoneNumber }),
-      });
+      await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/waitlist/create`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            email,
+            phoneNumber: `+${phoneNumber}`,
+          }),
+        }
+      );
     } catch (e) {
       alert("Oops! Error occurred. Try again.");
     }
@@ -34,7 +41,7 @@ export default function ClientComponent() {
     <>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center items-center md:gap-10 gap-5 lg:w-2/3 sm:w-10/12 w-full"
+        className="flex flex-col justify-center md:mt-0 mt-5 items-center md:gap-10 gap-5 lg:w-2/3 sm:w-10/12 w-full"
       >
         <div className="flex flex-col justify-center md:gap-2 gap-1 items-start w-full">
           <label
@@ -213,8 +220,8 @@ export default function ClientComponent() {
           )}
         </span>
         <span>
-          I want to receive marketing communication from Money Minds, including
-          by email and phone to the contact information I&apos;m submitting.
+          I agree to receive marketing communications from Money Minds via email
+          and phone, using the contact information I&apos;ve provided.
         </span>
       </span>
     </>

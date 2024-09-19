@@ -8,9 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundImage: {
+        "custom-gradient":
+          "radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(31, 31, 76, 0.1) 100%), linear-gradient(0deg, #080825 0%, #080825 100%)",
       },
     },
   },
