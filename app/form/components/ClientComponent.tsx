@@ -14,7 +14,7 @@ export default function ClientComponent() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      await fetch(
+      const response = await fetch(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/waitlist/create`,
         {
           method: "POST",
@@ -28,7 +28,15 @@ export default function ClientComponent() {
           }),
         }
       );
+      if (!response.ok) {
+        throw new Error("HTTP error! Status: " + response.status);
+      }
+      alert("Successful!\nYour details have been noted!");
+      setEmail("");
+      setUsername("");
+      setPhoneNumber("+1");
     } catch (e) {
+      console.error(e);
       alert("Oops! Error occurred. Try again.");
     }
   };
@@ -151,7 +159,7 @@ export default function ClientComponent() {
               paddingRight: 20,
               color: "#ffffff",
               borderRadius: 16,
-              width: "100%",
+              width: "calc(100%)",
               fontSize: 16,
               ...chillaxRegular.style,
             }}
