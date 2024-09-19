@@ -34,7 +34,7 @@ export default function Home() {
         </Link>
       </header>
 
-      <main className="flex flex-col lg:w-[80%] md:w-[90%] w-full justify-center items-center lg:gap-24 md:gap-16 gap-12 p-5">
+      <main className="flex flex-col lg:w-[80%] md:w-[90%] w-full justify-center items-center lg:gap-24 md:gap-16 gap-12 px-5">
         <div className="flex flex-col justify-center items-center gap-5">
           <span
             className={` text-center w-fit bg-gradient-to-r lg:text-[69px] md:text-[50px] text-[35px] from-white to-[#71717A] inline-block text-transparent bg-clip-text`}
@@ -144,7 +144,7 @@ export default function Home() {
               and secure your spot at the forefront of wealth creation.
             </span>
           </div>
-          <div className=" w-full flex flex-col justify-center gap-10 md:mt-16 mt-10 items-center text-center">
+          <div className=" w-full flex flex-col justify-center gap-10 md:mt-16 mt-10 md:mb-0 mb-10 items-center text-center">
             <Link
               href="/form"
               className="from-[#DBDBFF99] to-[#2A3439] bg-gradient-to-b md:w-[289px] w-[240px] rounded-[16px] p-[1px] "
