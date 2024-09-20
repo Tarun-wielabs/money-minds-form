@@ -207,7 +207,7 @@ export default function ClientComponent() {
           id="checkbox"
           onChange={() => setClick((prevState) => !prevState)}
           className={
-            "appearance-none w-[25px] h-[18px] bg-[url('/checkbox-untick.svg')] cursor-pointer bg-cover checked:bg-[url('/checkbox-tick.svg')] checked:bg-cover "
+            "appearance-none flex-shrink-0 md:w-[22px] w-[18px] md:h-[22px] h-[18px] bg-[url('/checkbox-untick.svg')] cursor-pointer bg-cover checked:bg-[url('/checkbox-tick.svg')] checked:bg-cover "
           }
           required
         />
